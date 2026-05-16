@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cue Backend</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="deck backend-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Cue backend</p>
+          <h1>Local API console</h1>
+        </div>
+        <div class="top-actions">
+          <a class="ghost-link" href="./index.html">Open app</a>
+          <button class="ghost-button" id="refresh-button" type="button">Refresh</button>
+        </div>
+      </header>
+
+      <section class="backend-grid">
+        <article class="profile-board">
+          <div class="section-heading">
+            <p class="eyebrow">API status</p>
+            <h2>Server on this computer</h2>
+          </div>
+          <div class="status-stack">
+            <div class="status-light" id="status-light"></div>
+            <pre id="health-output">Checking local API...</pre>
+            <button class="primary-button" id="toggle-button" type="button">Toggle API</button>
+          </div>
+        </article>
+
+        <article class="profile-board">
+          <div class="section-heading">
+            <p class="eyebrow">Heartbeat test</p>
+            <h2>Same-song matching</h2>
+          </div>
+          <form class="profile-form" id="heartbeat-form">
+            <label for="user-id">User ID</label>
+            <input id="user-id" value="demo-user-a" />
+            <label for="track-name">Track</label>
+            <input id="track-name" value="Dynamite" />
+            <label for="artist-name">Artist</label>
+            <input id="artist-name" value="BTS" />
+            <button class="primary-button" type="submit">Send heartbeat</button>
+          </form>
+        </article>
+
+        <article class="profile-board wide-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Matches</p>
+            <h2>Active local state</h2>
+          </div>
+          <pre id="matches-output">No matches loaded yet.</pre>
+        </article>
+      </section>
+    </main>
+    <script src="./backend.js"></script>
+  </body>
+</html>
